@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/api/vehicles', vehicleRoutes);
+app.use('/', vehicleRoutes);
 
 mongoose.connect('mongodb://localhost:27017/vehicleRental').then(() => {
     console.log('Connected to MongoDB');
